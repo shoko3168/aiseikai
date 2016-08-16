@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>        
+    <title>Card</title>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <link rel="icon" type="image/ico" href="favicon.ico"/>
+    
+    <link href="css/stylesheets.css" rel="stylesheet" type="text/css" />
+    
+    <script type='text/javascript' src='js/plugins/jquery/jquery.min.js'></script>
+    <script type='text/javascript' src='js/plugins/jquery/jquery-ui.min.js'></script>
+    <script type='text/javascript' src='js/plugins/jquery/jquery-migrate.min.js'></script>
+    <script type='text/javascript' src='js/plugins/jquery/globalize.js'></script>
+    <script type='text/javascript' src='js/plugins/bootstrap/bootstrap.min.js'></script>
+    
+    <script type='text/javascript' src='js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js'></script>
+    <script type='text/javascript' src='js/plugins/uniform/jquery.uniform.min.js'></script>
+    
+    <script type='text/javascript' src='js/plugins/knob/jquery.knob.js'></script>
+    <script type='text/javascript' src='js/plugins/sparkline/jquery.sparkline.min.js'></script>
+    <script type='text/javascript' src='js/plugins/flot/jquery.flot.js'></script>     
+    <script type='text/javascript' src='js/plugins/flot/jquery.flot.resize.js'></script>
+    
+    <script type='text/javascript' src='js/plugins.js'></script>    
+    <script type='text/javascript' src='js/actions.js'></script>    
+    <script type='text/javascript' src='js/charts.js'></script>
+
+</head>
+<body class="bg-img-num1" data-settings="open">
+<div class="container container-fixed">
+    <div class="row">
+        <div class="col-md-12">
+            <nav role="navigation" class="navbar brb"><div class="navbar-header"><button type="button" data-toggle="collapse" data-target=".navbar-tororo" class="navbar-toggle"><span class="sr-only">メニュー</span><span class="icon-reorder"></span></button><span class="navbar-brand"><img src="img/logo.png"></span></div><div class="collapse navbar-collapse navbar-tororo"><ul class="nav navbar-nav"><li><a href="doc"><span class="icon-book"></span>説明書</a></li><li ng-if="!myUser.isLogin"><a href="login"><span class="icon-cog"></span>ログイン</a></li><li ng-if="myUser.isLogin"><a href="logout"><span class="icon-cog"></span>ログアウト</a></li><li ng-if="myUser.isLogin"><a href="mkvil"><span class="icon-group"></span>部屋作成</a></li><li><a href="villist"><span class="icon-group"></span>部屋一覧</a></li><li><a href="chara"><span class="icon-heart"></span>キャラ一覧</a></li><li><a href="userlist"><span class="icon-user"></span>ユーザー一覧</a></li><li ng-if="myUser.isLogin"><a href="setting"><span class="icon-cog"></span>設定</a></li><li><a href="view1"><span class="icon-cog"></span>view1</a></li></nav>
+
+            <div class="row">
+                <div class="col-md-3">
+
+                </div>
+                <div class="col-md-9">
+                    <div class="block">
+                        <div class="head bg-default bg-light-ltr np">
+                            <ul class="nav nav-tabs pull-left">
+                                <li class="active">ゲーム画面</li>
+                            </ul>
+                        </div>
+                        <div class="block block-drop-shadow">
+                            <div class="head bg-dot30">
+                                <h2>BOARD</h2>
+                            </div>
+                            <div class="side pull-right">
+                                <ul class="buttons">
+                                    <li><a><span class="icon-refresh"></span></a></li>
+                                    <li><a><span class="icon-cogs"></span></a></li>
+                                </ul>
+                            </div>
+                            <div id="board" class="head-panel">
+                                <div class="hands-label">
+                                    1 + 4 = 14
+                                </div>
+                                <ul class="hands">
+                                    <!-- li(ng-repeat="card in myUser.hands", style="transform: translate({{(-520 + (880 / myUser.hands.length * $index))}}%, 0px)") -->
+                                    <li style="transform: translate(-520%, 0px)"><div><a class=""><img src="img/trump/c03.png"></a></div></li>
+                                    <li style="transform: translate(-440%, 0px)"><div><a class=""><img src="img/trump/c07.png"></a></div></li>
+                                    <li style="transform: translate(-360%, 0px)"><div><a class=""><img src="img/trump/h01.png"></a></div></li>
+                                    <li style="transform: translate(-280%, 0px)"><div><a class=""><img src="img/trump/h03.png"></a></div></li>
+                                    <li style="transform: translate(-200%, 0px)"><div><a class=""><img src="img/trump/h04.png"></a></div></li>
+                                    <li style="transform: translate(-120%, 0px)"><div><a class=""><img src="img/trump/h08.png"></a></div></li>
+                                    <li style="transform: translate(-40%, 0px)"><div><a class=""><img src="img/trump/s02.png"></a></div></li>
+                                    <li style="transform: translate(40%, 0px)"><div><a class=""><img src="img/trump/s05.png"></a></div></li>
+                                    <li style="transform: translate(120%, 0px)"><div><a class=""><img src="img/trump/s10.png"></a></div></li>
+                                    <li style="transform: translate(200%, 0px)"><div><a class=""><img src="img/trump/s12.png"></a></div></li>
+                                    <li style="transform: translate(280%, 0px)"><div><a class=""><img src="img/trump/d05.png"></a></div></li>
+                                    <li style="transform: translate(360%, 0px)"><div><a class=""><img src="img/trump/d08.png"></a></div></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $('.hands li a').click(function(){
+        $(this).toggleClass("selected");
+    });
+</script>
+</body>
+</html>

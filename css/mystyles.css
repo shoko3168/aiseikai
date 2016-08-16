@@ -1,0 +1,105 @@
+.aisei-logo {
+    width: 100px;
+}
+
+.accent-text span {
+    color: #FF1717;
+}
+
+.telop {
+    
+}
+
+
+.hands-label {
+    width: 100%;
+    height: 20px;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.hands {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.hands li {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 10%;
+    transform-origin: 50% 100%;
+    /**transform: rotateX(30deg); 自分を100%として*/
+    transform: translate(-50%, 0);
+}
+
+.hands li a {
+    display: block;
+    width: 100%;
+    height: auto;
+    transform: scale(0.55,0.55);
+}
+
+.hands li a img {
+    -webkit-transition: transform 0.5s ease-out;
+    -moz-transition: transform 0.5s ease-out;
+    -ms-transition: transform 0.5s ease-out;
+    -o-transition: transform 0.5s ease-out;
+    transition: transform 0.5s ease-out;
+}
+
+.handsbk li a:hover img {
+    transform: rotate(90deg);
+    transition: transform 2s ease-out;
+}
+
+.hands li a.selected img {
+    transform: translate3d(0, -60px, 0);
+}
+
+/** JS向け */
+.hands li > div {
+
+}
+
+/**.hands li:nth-child(3n) {*/
+
+/**
+.hands li:nth-child(0) {
+  transform: translate(-50%, 10px);
+}
+
+.hands li:nth-child(1) {
+  transform: translate(-50%, 30px);
+}
+
+.hands li:nth-child(2) {
+  transform: translate(-50%, 60px);
+}
+
+.hands li:nth-child(3) {
+  transform: translate(-50%, 90px);
+}
+*/
+
+/**
+.hands li:nth-child(1) {
+  transform: translate(-520%, 0px);
+}
+
+.hands li:nth-child(2) {
+  transform: translate(-460%, 0px);
+}
+
+.hands li:nth-child(3) {
+  transform: translate(80%, 0px);
+}
+*/
